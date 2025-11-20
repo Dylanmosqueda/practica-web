@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #000914 0%, #000000 80%);
+  color: #d4e6f1;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   ENCABEZADO PRINCIPAL
+   =========================== */
+.main-header {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main-header img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(60%) saturate(120%);
+}
+
+.main-header h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00bfff;
+  text-shadow: 0 0 15px #00bfff, 0 0 40px #0099ff;
+  font-size: 3rem;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #00bfff; }
+  to { text-shadow: 0 0 25px #00eaff, 0 0 45px #00aaff; }
+}
+
+.main-header button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00bfff;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.main-header button:hover {
+  background: #0077cc;
+  box-shadow: 0 0 25px #00eaff, 0 0 40px #0099ff;
+}
+
+.secciones {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #000a14 0%, #001a2b 50%, #000a14 100%);
+  border-top: 1px solid rgba(0, 191, 255, 0.2);
+}
+
+.secciones h2 {
+  font-size: 2rem;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 30px #0099ff;
+  margin-bottom: 1.5rem;
+}
+
+.secciones h3 {
+  font-size: 2rem;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 30px #0099ff;
+  margin-bottom: 1.5rem;
+}
+
+.secciones p {
+  width: 80%;
+  margin: auto;
+  line-height: 1.8;
+  text-align: justify;
+  color: #d8eaff;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000914;
+  color: #00bfff;
+  border-top: 2px solid #00bfff;
+  font-size: 1rem;
+}
+
+/* ===========================
+   ANIMACIONES DE EFECTO JAEGER
+   =========================== */
+@keyframes encendidoGlow {
+  0% { filter: brightness(0.3) drop-shadow(0 0 0px #00bfff); }
+  50% { filter: brightness(1.8) drop-shadow(0 0 35px #00bfff); }
+  100% { filter: brightness(1) drop-shadow(0 0 10px #00bfff); }
+}
+
+@keyframes vibracion {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-3px, 1px); }
+  40% { transform: translate(3px, -2px); }
+  60% { transform: translate(-1px, 2px); }
+  80% { transform: translate(3px, -3px); }
+}
+
+.main-header.encendido {
+  animation: encendidoGlow 3s ease-in-out, vibracion 0.2s ease infinite;
+}
+
+@media (max-width: 760px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .main-header h2 {
+    font-size: 2rem;
+  }
+
+  .main-header h3 {
+    font-size: 2rem;
+  }
+  .galeria img {
+    width: 50%;
+    height: auto;
+  }
+ .secciones h1 {
+    width: 95%;
+  }
+
+  .secciones h2 {
+    width: 95%;
+  }
+
+  .secciones h3 {
+    width: 95%;
+  }
+  .secciones p {
+    width: 95%;
+  }
+}
