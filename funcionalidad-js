@@ -1,0 +1,30 @@
+let contador = 1;
+
+
+
+function cambiarImagen() {
+  const banner = document.getElementById("banner");
+  banner.style.opacity = 1;
+  
+  setTimeout(() => {
+    alert("¡Jaeger activo! Prepárardo para la guerra.");
+  }, 300);
+
+  
+  setTimeout(() => {
+    header.classList.remove("encendiendo");
+  }, 1000);
+}
+
+function mostrarJaeger() {
+  const jaegers = [
+    "Gipsy Danger",
+    "Cherno Alpha",
+    "Striker Eureka",
+    "Saber Athena",
+    "Bracer Phoenix",
+    "Guardian Bravo"
+  ];
+  const random = jaegers[Math.floor(Math.random() * jaegers.length)];
+  alert("Mi Jaeger  es: " + random);
+}
